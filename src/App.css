@@ -96,7 +96,7 @@ html, body {
 }
 
 /* =========================================
-   4. HERO SECTION (VIDEO Y PORTADA)
+   4. HERO SECTION (CORREGIDO Y FINAL)
    ========================================= */
 .hero-container {
   height: 100vh;
@@ -108,23 +108,23 @@ html, body {
   align-items: center;
   text-align: center;
   color: var(--white);
-  overflow: hidden; /* IMPORTANTE para recortar el video */
-  background-color: #000; /* Fondo negro de respaldo */
+  overflow: hidden; 
+  background-color: #000; /* Fondo negro de seguridad */
 }
 
-/* EL VIDEO DE FONDO (Sin franjas negras) */
+/* EL VIDEO DE FONDO: Z-Index 0 (Base) */
 .hero-video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Hace el zoom inteligente */
+  object-fit: cover; /* Quita las franjas negras */
   object-position: center;
-  z-index: -2;
+  z-index: 0; /* Capa base */
 }
 
-/* Capa oscura (Overlay) */
+/* CAPA OSCURA (OVERLAY): Z-Index 1 (Encima del video) */
 .hero-overlay {
   position: absolute;
   top: 0; 
@@ -132,15 +132,17 @@ html, body {
   width: 100%; 
   height: 100%;
   background: rgba(0,0,0,0.35); /* Oscuridad del 35% */
-  z-index: -1;
+  z-index: 1; /* Capa intermedia */
 }
 
+/* CONTENIDO (TEXTO Y WIDGET): Z-Index 2 (Encima de todo) */
 .hero-content {
-  z-index: 1;
+  position: relative; /* Necesario para que el z-index funcione */
+  z-index: 2; /* Capa superior */
   width: 100%;
   max-width: 900px;
   padding: 0 20px;
-  margin-top: -50px; /* Un pequeño ajuste visual hacia arriba */
+  margin-top: -50px;
 }
 
 .hero-title {
@@ -172,25 +174,7 @@ html, body {
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
-}
-
-.input-group label {
-  display: block;
-  font-size: 11px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-  text-align: left;
-  color: var(--text-light);
-}
-
-.date-input {
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 2px;
-  font-family: 'Lato', sans-serif;
-  color: var(--text-dark);
-  min-width: 160px;
+  color: var(--text-dark); /* Asegura que el texto del widget sea oscuro */
 }
 
 /* =========================================
