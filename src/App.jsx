@@ -10,11 +10,9 @@ import Footer from './components/Footer';
 import './App.css'; // Importamos los estilos globales
 
 function App() {
-  
-  // INICIALIZAR ANIMACIONES
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Cuánto tarda la animación (1 segundo)
+      duration: 1000, 
       once: true,     // Que solo pase una vez al bajar
     });
   }, []);
