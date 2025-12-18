@@ -1,36 +1,31 @@
 import React from 'react';
-// Importamos la imagen de fondo
-import heroBg from '../assets/Hotel Sumaq.jpg'; 
+// 1. IMPORTA TU VIDEO DESDE ASSETS
+import heroVideo from '../assets/video-hero.mp4'; 
 
 const Hero = () => {
   return (
-    // Usamos la clase del CSS y pasamos la imagen como estilo en línea (porque es dinámica)
-    <div className="hero-container" style={{ backgroundImage: `url("${heroBg}")` }}>
+    // 2. QUITAMOS el backgroundImage del estilo en línea
+    <div className="hero-container">
       
-      {/* Contenedor del contenido (Texto + Widget) */}
+      {/* 3. AÑADIMOS LA ETIQUETA VIDEO */}
+      <video 
+        className="hero-video"
+        autoPlay    // Que se reproduzca solo
+        loop        // Que se repita en bucle
+        muted       // En silencio (necesario para autoplay en navegadores)
+        playsInline // Para que funcione bien en iPhone/móvil
+      >
+        <source src={heroVideo} type="video/mp4" />
+        Tu navegador no soporta el video.
+      </video>
+
+      {/* Capa oscura para leer el texto (igual que antes) */}
+      <div className="hero-overlay"></div>
+
+      {/* El resto del contenido sigue igual... */}
       <div className="hero-content">
         <h1 className="hero-title">Su Refugio de Lujo</h1>
-        <h2 className="hero-subtitle">en el Valle Sagrado</h2>
-        
-        <p style={{ letterSpacing: '3px', textTransform: 'uppercase', fontSize: '0.9rem', marginBottom: '20px' }}>
-          Urubamba, Cusco, Peru
-        </p>
-
-        {/* Widget de Reserva */}
-        <div className="booking-widget">
-          
-          <div className="input-group">
-            <label>Check In</label>
-            <input type="date" className="date-input" />
-          </div>
-
-          <div className="input-group">
-            <label>Check Out</label>
-            <input type="date" className="date-input" />
-          </div>
-
-          <button className="btn-primary">RESERVAR AHORA</button>
-        </div>
+        {/* ... */}
       </div>
     </div>
   );
