@@ -13,13 +13,13 @@ const About = () => {
         <h2 className="section-title">Sobre Nosotros</h2>
         
         <p>
-          SUMAQ Hotel es un santuario de lujo perfectamente integrado al entorno natural del Valle Sagrado de Urubamba. 
+          Apu Garden Lodge es un santuario de lujo perfectamente integrado al entorno natural del Valle Sagrado de Urubamba. 
           Diseñado para quienes buscan paz, nuestra arquitectura respeta la estética andina combinándola con el confort moderno.
         </p>
         
         <p>
           Con modernas instalaciones, arquitectura vanguardista y un compromiso inquebrantable con la experiencia del huésped, 
-          SUMAQ es mucho más que un hospedaje: es tu santuario personal.
+          Apu Garden Lodge es mucho más que un hospedaje: es tu santuario personal.
         </p>
         
         <button className="btn-primary">Conoce nuestra historia</button>

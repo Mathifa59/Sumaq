@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div style={{ fontFamily: '"Playfair Display", serif', fontSize: '24px', fontWeight: 'bold', color: 'white' }}>
-        SUMAQ
+        Apu Garden Lodge
       </div>
       
       {/* Enlaces funcionales con anclas (#) */}

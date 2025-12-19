@@ -8,7 +8,7 @@ const Footer = () => {
         
         {/* COLUMNA 1: LOGO Y DESCRIPCIÓN */}
         <div className="footer-col">
-          <h3 className="footer-logo">SUMAQ</h3>
+          <h3 className="footer-logo">Apu Garden Lodge</h3>
           <p className="footer-desc">Su refugio de lujo en el corazón del Valle Sagrado.</p>
         </div>
 
@@ -40,7 +40,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>© 2025 SUMAQ Hotel. Todos los derechos reservados.</p>
+        <p>© 2025  Apu Garden Lodge. Todos los derechos reservados.</p>
         <div className="social-icons">
             <Facebook size={20} />
             <Instagram size={20} />
