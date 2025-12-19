@@ -1,40 +1,47 @@
 import React from 'react';
-import { Facebook, Instagram, Twitter } from 'lucide-react';
+import { Facebook, Instagram, Twitter, MapPin, Phone, Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer style={{ backgroundColor: '#8B5A2B', color: 'white', padding: '60px 20px' }}>
-      <div className="container" style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '40px' }}>
+    <footer className="footer">
+      <div className="footer-container">
         
-        {/* Columna 1 */}
-        <div style={{ maxWidth: '300px' }}>
-          <h3 style={{ fontSize: '24px', marginBottom: '20px' }}>SUMAQ</h3>
-          <p style={{ fontSize: '14px', opacity: 0.8 }}>Su refugio de lujo en el corazón del Valle Sagrado.</p>
+        {/* COLUMNA 1: LOGO Y DESCRIPCIÓN */}
+        <div className="footer-col">
+          <h3 className="footer-logo">SUMAQ</h3>
+          <p className="footer-desc">Su refugio de lujo en el corazón del Valle Sagrado.</p>
         </div>
 
-        {/* Columna 2 */}
-        <div>
-          <h4 style={{ marginBottom: '20px' }}>Contacto</h4>
-          <p style={{ marginBottom: '10px', fontSize: '14px' }}>📍 Calle López Escobar n° 610</p>
-          <p style={{ marginBottom: '10px', fontSize: '14px' }}>📞 +51 (084) 9491</p>
-          <p style={{ marginBottom: '10px', fontSize: '14px' }}>✉️ reservas@sumaqhotel.com</p>
+        {/* COLUMNA 2: CONTACTO */}
+        <div className="footer-col">
+          <h4>Contacto</h4>
+          <div className="contact-item">
+            <MapPin size={16} /> <span>Calle López Escobar n° 610</span>
+          </div>
+          <div className="contact-item">
+            <Phone size={16} /> <span>+51 (084) 9491</span>
+          </div>
+          <div className="contact-item">
+            <Mail size={16} /> <span>reservas@sumaqhotel.com</span>
+          </div>
         </div>
 
-        {/* Columna 3 */}
-        <div>
-          <h4 style={{ marginBottom: '20px' }}>Enlaces</h4>
-          <ul style={{ listStyle: 'none', fontSize: '14px', opacity: 0.8 }}>
-            <li style={{ marginBottom: '8px' }}>Inicio</li>
-            <li style={{ marginBottom: '8px' }}>Habitaciones</li>
-            <li style={{ marginBottom: '8px' }}>Amenidades</li>
-            <li style={{ marginBottom: '8px' }}>Contacto</li>
+        {/* COLUMNA 3: ENLACES */}
+        <div className="footer-col">
+          <h4>Enlaces</h4>
+          <ul className="footer-links">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#rooms">Habitaciones</a></li>
+            <li><a href="#experiences">Experiencias</a></li>
+            <li><a href="#contact">Contacto</a></li>
           </ul>
         </div>
+
       </div>
 
-      <div className="container" style={{ borderTop: '1px solid rgba(255,255,255,0.2)', marginTop: '40px', paddingTop: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <p style={{ fontSize: '12px' }}>© 2025 SUMAQ Hotel. Todos los derechos reservados.</p>
-        <div style={{ display: 'flex', gap: '15px' }}>
+      <div className="footer-bottom">
+        <p>© 2025 SUMAQ Hotel. Todos los derechos reservados.</p>
+        <div className="social-icons">
             <Facebook size={20} />
             <Instagram size={20} />
             <Twitter size={20} />

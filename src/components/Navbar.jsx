@@ -12,18 +12,18 @@ const Navbar = () => {
   }, []);
 
   return (
-    // Usamos clases CSS dinámicas
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div style={{ fontFamily: '"Playfair Display", serif', fontSize: '24px', fontWeight: 'bold', color: 'white' }}>
         SUMAQ
       </div>
       
-      <ul className="nav-links">
-        <li style={{ cursor: 'pointer', color: 'white' }}>HOME</li>
-        <li style={{ cursor: 'pointer', color: 'white' }}>ROOMS</li>
-        <li style={{ cursor: 'pointer', color: 'white' }}>EXPERIENCES</li>
-        <li style={{ cursor: 'pointer', color: 'white' }}>CONTACT</li>
-      </ul>
+      {/* Enlaces funcionales con anclas (#) */}
+      <div className="nav-links">
+        <a href="#home">HOME</a>
+        <a href="#about">NOSOTROS</a>
+        <a href="#experiences">EXPERIENCIAS</a>
+        <a href="#contact">CONTACTO</a>
+      </div>
     </nav>
   );
 };

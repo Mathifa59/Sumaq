@@ -1,7 +1,4 @@
 import React from 'react';
-// IMPORTANTE: Asegúrate de que el nombre del archivo en la carpeta assets 
-// sea EXACTAMENTE igual (minúsculas/mayúsculas) al que escribes aquí.
-import heroVideo from '../assets/video-hero.mp4'; 
 
 const Hero = () => {
   return (
@@ -12,10 +9,10 @@ const Hero = () => {
         className="hero-video"
         autoPlay 
         loop 
-        muted={true} // Forzamos el mute para que el navegador permita el autoplay
-        playsInline  // Crucial para móviles
+        muted={true} 
+        playsInline  
       >
-        <source src={heroVideo} type="video/mp4" />
+        <source src="/Sumaq/video-hero.mp4" type="video/mp4" />
         {/* Mensaje de respaldo por si falla el formato */}
         Tu navegador no soporta el video.
       </video>

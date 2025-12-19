@@ -1,44 +1,46 @@
-import React, { useEffect } from 'react'; // Importa useEffect
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // Importa los estilos de la animación
+import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Experiences from './components/Experiences';
-import ContactForm from './components/ContactForm'; // Tu formulario que ya funciona
+import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
-import './App.css'; // Importamos los estilos globales
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import './App.css';
 
 function App() {
+  
+  // 1. INICIALIZAR ANIMACIONES
   useEffect(() => {
     AOS.init({
-      duration: 1000, 
-      once: true,     // Que solo pase una vez al bajar
+      duration: 1000,
+      once: true, // Para que solo anime una vez al bajar
     });
   }, []);
 
   return (
     <div>
       <Navbar />
-      <Hero />
       
-      {/* AHORA AÑADES EL EFECTO A LAS SECCIONES */}
-      
-      {/* Ejemplo: About con efecto de aparecer hacia arriba */}
-      <div data-aos="fade-up"> 
-        <About />
-      </div>
+      {/* 2. ASIGNAMOS IDs PARA LA NAVEGACIÓN */}
+      <section id="home">
+        <Hero />
+      </section>
 
-      <div data-aos="fade-up" data-aos-delay="200">
-        <Experiences />
-      </div>
+      <section id="about" data-aos="fade-up">
+        <About />
+      </section>
       
-      <div data-aos="fade-in">
-        <section className="container" style={{ padding: '80px 20px' }}>
-          <h2 className="section-title">Contáctanos</h2>
-          <ContactForm />
-        </section>
-      </div>
+      <section id="experiences" data-aos="fade-up">
+        <Experiences />
+      </section>
+      
+      <section id="contact" className="container" style={{ padding: '80px 20px' }} data-aos="fade-in">
+        <h2 className="section-title">Contáctanos</h2>
+        <p className="section-subtitle">Estamos listos para atenderte</p>
+        <ContactForm />
+      </section>
 
       <Footer />
     </div>
